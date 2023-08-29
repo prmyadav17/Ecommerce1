@@ -1,0 +1,86 @@
+{
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "build/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/myproducts",
+      "dest": "index.js"
+    },
+    {
+      "src": "/myproducts/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/mycategories",
+      "dest": "index.js"
+    },
+    {
+      "src": "/mycategories/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/mybrands",
+      "dest": "index.js"
+    },
+    {
+      "src": "/mybrands/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/myusers",
+      "dest": "index.js"
+    },
+    {
+      "src": "/myusers/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/myauth",
+      "dest": "index.js"
+    },
+    {
+      "src": "/myauth/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/mycart",
+      "dest": "index.js"
+    },
+    {
+      "src": "/mycart/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/myorders",
+      "dest": "index.js"
+    },
+    {
+      "src": "/myorders/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/webhook",
+      "dest": "index.js"
+    },
+    {
+      "src": "/create-payment-intent",
+      "dest": "index.js"
+    },
+    {
+      "src": "/",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "build/$1"
+    }
+  ]
+}
